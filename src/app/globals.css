@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+    --primary: 215 65% 23%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 28% 17%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 215 65% 23%;
+    --radius: 0.5rem;
+    --sidebar-background: 215 50% 14%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 40% 22%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 215 35% 22%;
+    --sidebar-ring: 24 95% 53%;
+  }
+  .dark {
+    --background: 215 28% 9%;
+    --foreground: 210 40% 96%;
+    --card: 215 28% 12%;
+    --card-foreground: 210 40% 96%;
+    --popover: 215 28% 12%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 215 16% 60%;
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 28% 20%;
+    --input: 215 28% 20%;
+    --ring: 24 95% 53%;
+  }
+}
+
+@layer base {
+  * { border-color: hsl(var(--border)); box-sizing: border-box; }
+  body { background-color: hsl(var(--background)); color: hsl(var(--foreground)); }
+
+  /* ── Solid backgrounds for all overlay / floating UI elements ── */
+  /* Tailwind 4 doesn't auto-map CSS vars the same way — force them explicitly */
+  [data-radix-popper-content-wrapper],
+  [role="dialog"],
+  [role="alertdialog"] {
+    --tw-bg-opacity: 1 !important;
+  }
+
+  /* Dropdown menus */
+  [data-radix-dropdown-menu-content],
+  [data-radix-select-content],
+  [data-radix-context-menu-content],
+  [data-radix-menubar-content],
+  [data-radix-navigation-menu-content] {
+    background-color: hsl(var(--popover)) !important;
+    color: hsl(var(--popover-foreground)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+  }
+
+  /* Dialog / AlertDialog content */
+  [role="dialog"] > div,
+  [role="alertdialog"] > div {
+    background-color: hsl(var(--background)) !important;
+  }
+}
+
+@keyframes accordion-down {
+  from { height: 0 }
+  to { height: var(--radix-accordion-content-height) }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height) }
+  to { height: 0 }
+}
+.animate-accordion-down { animation: accordion-down 0.2s ease-out; }
+.animate-accordion-up { animation: accordion-up 0.2s ease-out; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground)); }
+
+@layer utilities {
+  .bg-sidebar { background-color: hsl(var(--sidebar-background)); }
+  .text-sidebar-foreground { color: hsl(var(--sidebar-foreground)); }
+  .bg-sidebar-accent { background-color: hsl(var(--sidebar-accent)); }
+  .text-sidebar-accent-foreground { color: hsl(var(--sidebar-accent-foreground)); }
+  .border-sidebar-border { border-color: hsl(var(--sidebar-border)); }
+  .ring-sidebar-ring { --tw-ring-color: hsl(var(--sidebar-ring)); }
+  .text-sidebar-primary { color: hsl(var(--sidebar-primary)); }
+  .bg-sidebar-primary { background-color: hsl(var(--sidebar-primary)); }
+  .text-sidebar-primary-foreground { color: hsl(var(--sidebar-primary-foreground)); }
+  .hover\:bg-sidebar-accent:hover { background-color: hsl(var(--sidebar-accent)); }
+  .hover\:text-sidebar-accent-foreground:hover { color: hsl(var(--sidebar-accent-foreground)); }
+  .data-\[active\=true\]\:bg-sidebar-accent[data-active=true] { background-color: hsl(var(--sidebar-accent)); }
+  .data-\[active\=true\]\:text-sidebar-accent-foreground[data-active=true] { color: hsl(var(--sidebar-accent-foreground)); }
+  .data-\[state\=open\]\:bg-sidebar-accent[data-state=open] { background-color: hsl(var(--sidebar-accent)); }
+  .data-\[state\=open\]\:text-sidebar-accent-foreground[data-state=open] { color: hsl(var(--sidebar-accent-foreground)); }
+}
