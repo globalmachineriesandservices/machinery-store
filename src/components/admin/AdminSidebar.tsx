@@ -51,7 +51,13 @@ export default function AdminSidebar() {
             <SidebarMenuButton size='lg' asChild>
               <Link href='/admin'>
                 <div className='flex aspect-square size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground'>
-                  <Cog className='size-4' />
+                  <Image
+                    src='/logo-dark.png'
+                    alt='Settings'
+                    width={32}
+                    height={32}
+                    className='object-contain'
+                  />
                 </div>
                 <div className='grid flex-1 text-left text-sm leading-tight'>
                   <span
