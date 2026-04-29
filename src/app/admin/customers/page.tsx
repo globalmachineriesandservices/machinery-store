@@ -57,10 +57,10 @@ export default async function AdminCustomersPage({
       </div>
       <CustomersClient
         initialUsers={JSON.parse(JSON.stringify(users))}
-        total={total}
+        {/* total={total}
         page={page}
         limit={limit}
-        totalPages={Math.ceil(total / limit)}
+        totalPages={Math.ceil(total / limit)} */}
       />
     </div>
   )
