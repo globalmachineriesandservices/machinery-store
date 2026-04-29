@@ -87,9 +87,9 @@ function MultiSelect({
                   className="pointer-events-none"
                 />
                 <span className="flex-1 truncate">{opt.label}</span>
-                {opt.count !== undefined && (
+                /* {opt.count !== undefined && (
                   <span className="text-xs text-muted-foreground tabular-nums">{opt.count}</span>
-                )}
+                )} */
               </div>
             );
           })}
