@@ -55,13 +55,7 @@ export default function Navbar({ company, categories }: NavbarProps) {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            {company?.logo ? (
-              <Image src={company.logo} alt={company.name} width={40} height={40} className="rounded-lg object-contain" />
-            ) : (
-              <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "hsl(var(--primary))" }}>
-                <Cog className="w-5 h-5 text-white" />
-              </div>
-            )}
+              <Image src={'./logo.svg'} alt={company.name} width={40} height={40} className="rounded-lg object-contain" />
             <span
               className="font-extrabold text-lg tracking-wide hidden sm:block"
               style={{ fontFamily: "'Barlow Condensed', sans-serif", color: "hsl(var(--primary))" }}
