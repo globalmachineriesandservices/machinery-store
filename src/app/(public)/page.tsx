@@ -349,9 +349,9 @@ export default async function HomePage() {
                           >
                             {cat.name.toUpperCase()}
                           </p>
-                          <p className='text-white/50 text-xs mt-0.5'>
+                          {/* <p className='text-white/50 text-xs mt-0.5'>
                             {cat._count.products} products
-                          </p>
+                          </p> */}
                         </div>
                         <div className='absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity'>
                           <div className='w-7 h-7 rounded-full bg-orange-500 flex items-center justify-center'>
