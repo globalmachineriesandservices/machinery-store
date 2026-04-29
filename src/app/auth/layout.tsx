@@ -44,7 +44,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
             className="text-white font-extrabold text-xl tracking-wide"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
-            MACHINERYSTORE
+            Global Machineries & Services
           </span>
         </Link>
 
