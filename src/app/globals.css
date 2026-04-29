@@ -78,8 +78,13 @@
   }
 
   /* Dialog / AlertDialog content */
-  [role="dialog"] > div,
+  /* [role="dialog"] > div,
   [role="alertdialog"] > div {
+    background-color: hsl(var(--background)) !important;
+  } */
+
+  [role='dialog']:not([data-sidebar='sidebar']) > div,
+  [role='alertdialog'] > div {
     background-color: hsl(var(--background)) !important;
   }
 }
