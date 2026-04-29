@@ -1,6 +1,9 @@
 import prisma from "@/lib/prisma";
 import ProductsClient from "./ProductsClient";
 
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 export const metadata = { title: "Products" };
 
 export default async function ProductsPage() {
