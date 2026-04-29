@@ -84,7 +84,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
         {/* Bottom */}
         <p className="relative text-white/30 text-xs">
-          © {new Date().getFullYear()} MachineryStore. All rights reserved.
+          © {new Date().getFullYear()} Global Machineries & Services. All rights reserved.
         </p>
       </div>
 
@@ -102,7 +102,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
             className="font-extrabold tracking-wide"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", color: "hsl(var(--primary))" }}
           >
-            MACHINERYSTORE
+            Global Machineries & Services
           </span>
         </Link>
 
