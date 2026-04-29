@@ -47,13 +47,7 @@ export default function Footer({ company }: FooterProps) {
             {/* Brand */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-3 mb-4">
-                {company?.logo ? (
-                  <Image src={company.logo} alt={company.name} width={40} height={40} className="rounded-lg brightness-200" />
-                ) : (
-                  <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
-                    <Cog className="w-6 h-6 text-white" />
-                  </div>
-                )}
+                  <Image src={'./logo.svg'} alt={company.name} width={40} height={40} className="rounded-lg brightness-200" />
                 <span className="font-extrabold text-xl tracking-wide" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                   {company?.name?.toUpperCase() || "MACHINERYSTORE"}
                 </span>
