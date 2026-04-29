@@ -98,10 +98,6 @@ export default async function AdminInquiriesPage({
 
       <InquiriesClient
         initialInquiries={JSON.parse(JSON.stringify(inquiries))}
-        total={total}
-        page={page}
-        limit={limit}
-        totalPages={Math.ceil(total / limit)}
       />
     </div>
   )
