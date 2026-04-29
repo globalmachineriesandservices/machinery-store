@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image"
 import { Cog } from "lucide-react";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
@@ -30,9 +31,14 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         <Link href="/" className="relative flex items-center gap-3">
           <div
             className="w-10 h-10 rounded-xl flex items-center justify-center"
-            style={{ background: "hsl(var(--accent))" }}
           >
-            <Cog className="w-6 h-6 text-white" />
+            <Image
+              src='logo-dark.png'
+              alt='Global Machineries & Services'
+              width={48}
+              height={48}
+              className='object-contain'
+            />
           </div>
           <span
             className="text-white font-extrabold text-xl tracking-wide"
