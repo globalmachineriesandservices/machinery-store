@@ -61,7 +61,7 @@ export default function AdminSidebar() {
                       letterSpacing: '0.05em',
                     }}
                   >
-                    MACHINERY
+                    GMS ADMIN
                   </span>
                   <span className='truncate text-xs text-muted-foreground'>
                     Admin Panel
