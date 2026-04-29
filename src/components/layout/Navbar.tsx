@@ -55,7 +55,7 @@ export default function Navbar({ company, categories }: NavbarProps) {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-              <Image src={'./logo.png'} alt={'Global Machineries & Services'} width={40} height={40} className="rounded-lg object-contain" />
+              <Image src={'/logo.png'} alt={'Global Machineries & Services'} width={40} height={40} className="rounded-lg object-contain" />
             <span
               className="font-extrabold text-lg tracking-wide hidden sm:block"
               style={{ fontFamily: "'Barlow Condensed', sans-serif", color: "hsl(var(--primary))" }}
